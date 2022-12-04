@@ -14,6 +14,6 @@ def group_priority(group)
   item_priority(item)
 end
 
-lines = File.readlines('day_02_input.txt', chomp: true)
-puts lines.map { |line| line_priority(line) }.sum
-puts lines.each_slice(3).map { |group| group_priority(group) }.sum
+lines = File.readlines('day_03_input.txt', chomp: true)
+puts lines.sum { |line| line_priority(line) }
+puts lines.each_slice(3).sum { |group| group_priority(group) }
